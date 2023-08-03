@@ -395,6 +395,7 @@ def main
       puts "   Battery Level: #{state['batteryLevel']['value'].round(1)}%"
       puts "   Range: #{kilometers_to_distance_units(state['distanceToEmpty']['value'], options[:metric]).round(1)} #{distance_units}"
       puts "   Battery Limit: #{state['batteryLimit']['value'].round(1)}%"
+      puts "   Battery Capacity: #{state['batteryCapacity']['value']} kW"
       puts "   Charging state: #{state['chargerState']['value']}"
       puts "   Charger status: #{state['chargerStatus']['value']}" if state['chargerStatus']
       puts "   Time to end of charge: #{state['timeToEndOfCharge']['value']}"
