@@ -390,7 +390,8 @@ def main
       unless options[:privacy]
         puts "Location: #{state['gnssLocation']['latitude']},#{state['gnssLocation']['longitude']}"
       end
-      puts "Speed: #{state['gnssSpeed']['latitude']},#{state['gnssLocation']['longitude']}"
+      puts "Speed: #{state['gnssSpeed']['value']}"
+      puts "Bearing: #{state['gnssBearing']['value'].round(1)} degrees"
 
       puts "Battery:"
       puts "   Battery Level: #{state['batteryLevel']['value'].round(1)}%"
